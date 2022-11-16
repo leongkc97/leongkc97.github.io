@@ -1,0 +1,90 @@
+/*##### EXPERIENCE SECTION #####*/
+
+.experience{
+    padding: 50px 0;
+    overflow-x: hidden;
+    
+    .content{
+      text-align: center;
+      
+      h1{
+        font-size: 2em;
+        color: #fff;
+      }
+      
+      ul{
+        padding: 50px 0;
+        list-style-type: none;
+  
+        li{
+          background: $experience-content-bg-color;
+          position: relative;
+          margin-left: 20px;
+          width: 5px;
+          padding-bottom: 40px;
+  
+          &:last-child{
+            padding-bottom: 7px;
+          }
+  
+          &:before{
+            content: '';
+            background: $experience-bg-color;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border: 4px solid $experience-content-bg-color;
+          }
+  
+          .hidden {
+            opacity: 0;
+            margin-left: 10vw;
+          }
+  
+          .experience-content{
+            background: $experience-content-bg-color; 
+            position: relative;
+            top: 7px;
+            left: 48px;
+            width: calc(100vw - 100px);
+            padding: 20px;
+            text-align: center;
+            -webkit-border-radius: 0 5px 5px;
+            -moz-border-radius: 0 5px 5px;
+            border-radius: 0 5px 5px;
+  
+            h2{
+              font-size: 1.5em;
+              color: $title-color;
+              padding-bottom: 10px;
+            }
+  
+            .experience-time{
+              color: #777;
+              font-size: 1.1em;
+              padding-bottom: 10px;
+            }
+  
+            p{
+              color: #1a1a1a;
+              font-size: .95em;
+            }
+  
+            &:before{
+              content: '';
+              background: $experience-content-bg-color;
+              position: absolute;
+              top: 0;
+              left: -35px;
+              width: 35px;
+              height: 5px;
+            }
+          }
+        }
+      }
+    }
+  }

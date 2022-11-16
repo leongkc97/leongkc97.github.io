@@ -650,15 +650,60 @@ xclip
     z-index: 0;
 }
 
+.btn-three {
+	color: #FFF;
+	transition: all 0.5s;
+	position: relative;
+}
+.btn-three::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+    border-radius:130px;
+	background-color: rgba(140,140,140,0.1);
+	transition: all 0.3s;
+    border: 1px rgb(100, 100, 100);
+    border:1px solid black;
+
+}
+.btn-three:hover::before {
+	opacity: 0 ;
+	transform: scale(0.5,0.5);
+}
+.btn-three::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+    border-radius:130px;
+	border: 1px solid rgba(255,255,255,0.5);
+	transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+	opacity: 1;
+	transform: scale(1,1);
+}
 
 
 .services-inner-box{
-	padding: 15px;
+	padding: 20px;
 	background: #ffffff;
 	margin-bottom: 30px;
+    border-radius: 130px;
+	text-align: center;
+    border: 1px rgb(100, 100, 100);
 }
 .ser-icon{
-	width: 90px;
+	/* width: 90px; */
 	height: 90px;
 	text-align: center;
 	line-height: 90px;
@@ -2468,4 +2513,96 @@ select.mobile-device {
     border-color: rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
 }
+a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+a::after {
+    content: attr(data-replace);
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+  }
+  
+  a:hover::after,
+  a:focus::after {
+    transform: translate3d(0, 0, 0);
+  }
+  a::before,
+a::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+  a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+  }
+  
+  a:hover::before,
+  a:focus::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
 
+  @import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+@keyframes load{0%{stroke-dashoffset:0}}
+.progress {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    &>li {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        color: #93A2AC;
+        font-family: Lato;
+        font-weight:100;
+        margin: 2rem;
+        &:before {
+            content: attr(data-name);
+            position: absolute;
+            width: 100%;
+            bottom: -2rem;
+            font-weight:400;
+        }
+        &:after {
+            content: attr(data-percent);
+            position: absolute;
+            width: 100%;
+            top: 3.7rem;
+            left: 0;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+    svg {
+        width: 10rem;
+        height: 10rem;
+        &:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: rotate(-90deg);
+        }
+        &:nth-child(2) path {
+            fill: none;
+            stroke-width: 25;
+            stroke-dasharray: 629;
+            stroke: #fff;
+            opacity:.9;
+            animation: load 10s;
+        }
+    }
+}
