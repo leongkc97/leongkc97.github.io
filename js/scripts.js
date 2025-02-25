@@ -45,3 +45,6 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+// Set the current year in the footer
+document.getElementById("year").textContent = new Date().getFullYear();
