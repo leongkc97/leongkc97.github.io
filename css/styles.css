@@ -326,3 +326,16 @@ p, li { font-size: 1.2em; margin-bottom: 15px; color: #ddd; }
         text-align: center;
     }
 }
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.9);
+        border-top: 1px solid #444;
+        margin-top: 40px;
+        font-size: 1em;
+        color: #ddd;
+    }
+    footer p {
+        margin: 0;
+    }
