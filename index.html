@@ -7,11 +7,16 @@
     <meta name="description" content="Kai Cheng Leong — product development analyst and former lead business analyst. Specs, Agile delivery, Laravel and Vue.">
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- runs before paint so light-mode visitors don't see a dark flash -->
+    <script>try { if (localStorage.theme === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}</script>
 </head>
 <body>
-<button type="button" class="track" id="track" aria-pressed="true"><span class="dot"></span>Track changes</button>
+<div class="toolbar">
+    <button type="button" class="tool" id="theme">Light mode</button>
+    <button type="button" class="tool" id="track" aria-pressed="true"><span class="dot"></span>Track changes</button>
+</div>
 
 <main class="sheet">
 
